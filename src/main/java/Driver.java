@@ -2,6 +2,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * @author Khanh Nguyen
+ * @since 7/11/2024
+ * This is the driver class that houses the main function
+ */
 public class Driver {
     public static void main(String[] args) {
         HashMap<String, Integer> items = new HashMap<>();
