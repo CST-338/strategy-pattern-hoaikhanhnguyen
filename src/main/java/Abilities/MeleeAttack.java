@@ -1,9 +1,13 @@
+package Abilities;
+
+import Monsters.Monster;
+
 /**
  * @author Khanh Nguyen
- * @since 7/11/2024
- * This is the MeleeAttack class that implements Attack interface
+ * @since 7/12/2024
+ * This is the Abilities.MeleeAttack class that implements Abilities.Attack interface
  */
-public class MeleeAttack implements Attack{
+public class MeleeAttack implements Attack {
     Monster attacker;
 
     public MeleeAttack(Monster attacker) {
@@ -14,6 +18,6 @@ public class MeleeAttack implements Attack{
     public Integer attack(Monster target) {
         String message = attacker + " uses a melee attack on " + target;
         System.out.println(message);
-        return null;
+        return attacker.getStr() - target.getDef();
     }
 }

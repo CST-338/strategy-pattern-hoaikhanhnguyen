@@ -1,7 +1,11 @@
+package Abilities;
+
+import Monsters.Monster;
+
 /**
  * @author Khanh Nguyen
- * @since 7/11/2024
- * This is the RangedAttack class that implements Attack interface
+ * @since 7/12/2024
+ * This is the Abilities.RangedAttack class that implements Abilities.Attack interface
  */
 public class RangedAttack implements Attack {
     Monster attacker;
@@ -14,6 +18,6 @@ public class RangedAttack implements Attack {
     public Integer attack(Monster target) {
         String message = attacker + " uses a ranged attack on " + target;
         System.out.println(message);
-        return null;
+        return attacker.getAgi() - target.getDef();
     }
 }
